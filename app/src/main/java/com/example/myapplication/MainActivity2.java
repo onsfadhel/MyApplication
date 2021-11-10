@@ -26,18 +26,21 @@ public class MainActivity2 extends AppCompatActivity {
                 String tempF=editTextFer.getText().toString();
                 if ((tempC.isEmpty())&&(tempF.isEmpty())){
                     Toast.makeText(MainActivity2.this, "veuillez remplir l'un des champs", Toast.LENGTH_LONG).show();
+                    editTextcelsus.setText("");
+                    editTextFer.setText("");
                 }
                 else if (!(tempC.isEmpty())&& !(tempF.isEmpty())){
                     Toast.makeText(MainActivity2.this, "il faut entrer une Seul valeur", Toast.LENGTH_LONG).show();
-
+                    editTextcelsus.setText("");
+                    editTextFer.setText("");
                 }
                 else if (!(tempC.isEmpty())) {
-                    float val1=new Float(editTextcelsus.getText().toString()).floatValue();
+                    float val1= Float.parseFloat(editTextcelsus.getText().toString());
 
                     float converttofer= (float) (val1*1.8+32);
                     editTextFer.setText(converttofer+"");
                 } else {
-                    float val2=new Float(editTextFer.getText().toString()).floatValue();
+                    float val2= Float.parseFloat(editTextFer.getText().toString());
                     float converttocelsus = (float) ((val2 - 32)/1.8);
                     editTextcelsus.setText(converttocelsus+"");
                 }
