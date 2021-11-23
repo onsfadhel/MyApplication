@@ -68,5 +68,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonInitialiser"
+        android:layout_width="192dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28dp"
+        android:text="Réintialiser"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvertir" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
