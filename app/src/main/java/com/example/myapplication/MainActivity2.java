@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity2 extends AppCompatActivity {
     EditText editTextcelsus,editTextFer;
     Button converbuttom;
+    Button buttonInitialiser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
         editTextcelsus=findViewById(R.id.editTextCels);
         editTextFer=findViewById(R.id.editTextFere);
         converbuttom=findViewById(R.id.buttonConvertir);
-
+        buttonInitialiser=findViewById(R.id.buttonInitialiser);
         converbuttom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +45,15 @@ public class MainActivity2 extends AppCompatActivity {
                     float converttocelsus = (float) ((val2 - 32)/1.8);
                     editTextcelsus.setText(converttocelsus+"");
                 }
+            }
+        });
+         buttonInitialiser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editTextcelsus.setText("");
+                editTextFer.setText("");
+
+
             }
         });
     }
